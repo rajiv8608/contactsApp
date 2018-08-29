@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   loginData:any;
+  isLogin:any = false;
   constructor(private fb:FormBuilder, private SharedService : SharedService, private router:Router) { 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required]],
@@ -32,6 +33,8 @@ export class LoginComponent implements OnInit {
 
     if(this.loginData[0].email == credentials.email && this.loginData[0].password == credentials.password ){ 
        alert("login successful");
+       this.isLogin = true;
+       localStorage.setItem("isLogin", this.isLogin );
        this.SharedService.sendMessage(false);
        this.router.navigate(['/home']);
     } 
