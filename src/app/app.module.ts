@@ -9,17 +9,30 @@ import { SearchPipe } from './search.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {KeysPipe} from '../assets/pipes/app.pipe';
+import {ModalModule} from 'ngx-bootstrap';
+import { CommanModelComponent } from '../assets/shared/comman-model/comman-model.component';
+import { AddContactComponent } from '../assets/shared/add-contact/add-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     SearchPipe,
-    HomeComponent
+    HomeComponent,
+    KeysPipe,
+    CommanModelComponent,
+    AddContactComponent
   ],
   imports: [
-    BrowserModule,FormsModule,AppRoutingModule,ReactiveFormsModule,HttpClientModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
+  entryComponents: [CommanModelComponent , AddContactComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
