@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
     this.currentContactsList =  this.groupList[gname];
   }
   public AddContact() {
+    console.log();
     var model = this.modalService.show(AddContactComponent, {animated: true, keyboard: true, backdrop: true, ignoreBackdropClick: false})
     model.content.emitData.subscribe(data => {
       this.groupList[this.currentGroup].push(data);
