@@ -19,7 +19,7 @@ export class AddContactComponent implements OnInit {
   });
   @Output() emitData: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private bsModalRef: BsModalRef, private fb: FormBuilder) {
+  constructor(public bsModalRef: BsModalRef, private fb: FormBuilder) {
 
   }
 

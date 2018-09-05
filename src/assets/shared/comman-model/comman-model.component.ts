@@ -13,7 +13,7 @@ export class CommanModelComponent implements OnInit {
   public groupName:any;
   @Output() visibleChange: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private bsModalRef: BsModalRef ) {
+  constructor(public bsModalRef: BsModalRef ) {
   }
 
   ngOnInit() {
