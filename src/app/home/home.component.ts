@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   public currentGroup:any ;
   public showContactsPane:any = false;
   public currentContactsList:any = [];
+  p: number = 1;
   constructor( private SharedService: SharedService, private modalService: BsModalService ){
 
   }

@@ -13,6 +13,9 @@ import {KeysPipe} from '../assets/pipes/app.pipe';
 import {ModalModule} from 'ngx-bootstrap';
 import { CommanModelComponent } from '../assets/shared/comman-model/comman-model.component';
 import { AddContactComponent } from '../assets/shared/add-contact/add-contact.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { CustomDirectiveDirective } from './custom-directive.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { AddContactComponent } from '../assets/shared/add-contact/add-contact.co
     HomeComponent,
     KeysPipe,
     CommanModelComponent,
-    AddContactComponent
+    AddContactComponent,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { AddContactComponent } from '../assets/shared/add-contact/add-contact.co
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),NgxPaginationModule
   ],
   entryComponents: [CommanModelComponent , AddContactComponent],
   providers: [],
